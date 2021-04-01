@@ -1,11 +1,11 @@
 extends layout
 
 block main
-  section#todos(class=todoListInfo.isDone ? "done" : "")
+  section#todos(class=isDoneTodoList ? "done" : "")
     header
       h2= todoList.title
       ul
-        if todoListInfo.hasUndoneTodos
+        if hasUndoneTodos
           li
             form.complete_all(action=`/lists/${todoList.id}/complete_all`
                               method="post")
