@@ -9,6 +9,10 @@ module.exports = class SessionPersistence {
     session.todoLists = this._todoLists;
   }
 
+    isUniqueConstraintViolation(_error) {
+    return false;
+  }
+
   _findTodoList(todoListId) {
     return this._todoLists.find(todoList => todoList.id == todoListId);
   }
