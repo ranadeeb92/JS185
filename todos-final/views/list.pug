@@ -18,7 +18,7 @@ block main
       each todo in todoList.todos
         li(class=todo.done ? "done" : "")
           form.check(action=`/lists/${todoList.id}/todos/${todo.id}/toggle`
-                    method="post")
+                     method="post")
             input(type="hidden" name="done" value=!todo.done)
             button Done
 
@@ -26,7 +26,7 @@ block main
           form.delete(action=`/lists/${todoList.id}/todos/${todo.id}/destroy`
                       method="post")
             button Delete
-            
+
     form(action=`/lists/${todoList.id}/todos` method="post")
       dl
         dt
