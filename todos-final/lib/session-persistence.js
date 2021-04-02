@@ -124,7 +124,7 @@ module.exports = class SessionPersistence {
     return true;
   }
 
-  editeTodoList(newTitle, todoListId) {
+  editTodoList(newTitle, todoListId) {
     let todoList = this._findTodoList(todoListId);
     if(!todoList) return false;
 

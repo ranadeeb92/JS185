@@ -24,3 +24,9 @@ html(lang="en-US")
               li.flash(class=kind)= message
 
       block main
+    footer 
+      block signIn 
+          form(action="/users/signout" method="post")
+            fieldset.action 
+              p Sign in as #{username}. 
+              button Sign Out 
